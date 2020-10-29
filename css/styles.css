@@ -8,7 +8,9 @@
   height: 100%;
   overflow: auto;
 } */
-
+.body {
+  background-color: rgb(21, 30, 43);  
+}
 .chats__list-item:not(:first-child) {
   margin-top: -1px;
 }

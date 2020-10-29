@@ -28,6 +28,7 @@ var elCurrencySelect = elExchangeForm.querySelector('.currency-select');
 var elResultWrapper = elExchangeForm.querySelector('.result-wrapper');
 var elResult = elExchangeForm.querySelector('.result');
 var elAlert = elExchangeForm.querySelector('.alert-result');
+var elAlertMinus = elExchangeForm.querySelector('.alert-minus');
 
 // var sayHi = function (name) {
 //   console.log(`Hi, ${name}`);
@@ -45,11 +46,14 @@ var convertCurrencyToUzs = function (evt) {
     // console.log('Brat, son kiriting');
     elAlert.classList.remove('d-none');
     elResultWrapper.classList.add('d-none');
+    elAlertMinus.classList.add('d-none');
     return;
   }
 
   if (summ < 0) {
-    elSummInput.classList.add('is-invalid');
+    elAlertMinus.classList.remove('d-none');
+    elAlert.classList.add('d-none');
+    elResultWrapper.classList.add('d-none');
     return;
   }
 
@@ -59,6 +63,7 @@ var convertCurrencyToUzs = function (evt) {
 
   elResultWrapper.classList.remove('d-none');
   elAlert.classList.add('d-none');
+  elAlertMinus.classList.add('d-none');
   elResult.textContent = result;
 };
 
