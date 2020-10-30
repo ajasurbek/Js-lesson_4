@@ -1,43 +1,23 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS_lesson-4</title>
+  <title>JS_lesson-5</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="body mt-5">
+  <div class="container mt-5 mb-5">
+    <h2>Game</h2>
 
-  <div class="container w-75 py-5">
-    <!-- <button class="btn btn-success">Test</button> -->
+    <form class="form" autocomplete="off" action="https://echo.htmlacademy.ru" method="GET">
+      <input class="form-input mb-5 mt-3 w-25 d-block" type="number" name="game" placeholder="number">
+      <button class="main-button w-25 btn btn-primary" type="submit">Check</button>
+    </form>
+    <h3 class="game-text mt-5"></h3>
+  </div>
 
-    <form class="exchange-form" action="https://echo.htmlacademy.ru" method="POST">
-
-      <div class="form-group">
-        <input class="summ-input form-control" id="summ-input" type="text" name="summ"aria-label="Summani kiriting" step="any" placeholder="Pulni kiriting" >
-      </div>
-
-      <div class="form-group">
-        <select class="currency-select form-control" id="currency-select" name="currency" aria-label="Valyutani tanlang" required>
-          <option value="" selected disabled>Valyutani tanlang</option>
-          <option value="10322.23">USD</option>
-          <option value="12213.23">EURO</option>
-          <option value="138.13">RUB</option>
-        </select>
-      </div>
-
-      <div class="d-none result-wrapper alert alert-info">
-        Natija:
-        <output class="result" for="summ-input currency-select"></output> so'm
-      </div>
-      <div class="alert-result d-none alert alert-danger" role="alert">
-      Amaki xarf emas pulizi kiriting!!!
-      </div>
-      <div class="alert-minus d-none alert alert-primary" role="alert">
-        Iltimos manfiy son kiritmang biz qarzga ishlamaymiz!!!
-        </div>
-      <button class="btn btn-success" type="submit">Calculate</button>
 
     </form>
   </div>
